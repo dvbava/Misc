@@ -1,0 +1,3 @@
+1.0.0
+
+In the latest code, internet traffic from clients connected to the ESP32 SoftAP is routed through a WireGuard interface (full‑tunnel 0.0.0.0/0) and sent out over the ESP32 STA uplink. This makes the device act like a small secure router: clients use the AP, and their traffic is encapsulated inside WireGuard packets over the upstream Wi‑Fi.
