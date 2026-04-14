@@ -28,6 +28,7 @@ apt install -y \
   libqt6svg6 \
   libssl-dev \
   libz-dev \
+  libsecret-1-dev \
   libsqlite3-dev \
   libfuse3-dev \
   libgl1-mesa-dev
@@ -67,6 +68,27 @@ mkdir build && cd build
 cmake .. -DBUILD_WITH_QT6=ON
 make -j$(nproc)
 make install
+
+# =========================
+# Qt6Keychain
+# =========================
+
+echo "=== Building Qt6Keychain ==="
+cd "$WORKDIR"
+
+if [ ! -d qtkeychain ]; then
+  git clone https://github.com/frankosterfeld/qtkeychain.git
+fi
+
+cd qtkeychain
+rm -rf build
+mkdir build && cd build
+
+cmake -DBUILD_WITH_QT6=ON ..
+make -j$(nproc)
+make install
+
+ldconfig
 
 # =========================
 # OpenCloud Desktop
