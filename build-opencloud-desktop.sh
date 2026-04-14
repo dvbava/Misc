@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# =========================
+# OpenCloud AppImage Builder (ARM64 / Qt6)
+# =========================
+
 APP_NAME="OpenCloud"
 ORIG_HOME=$(eval echo ~${SUDO_USER})
 WORKDIR="$ORIG_HOME/opencloud-build"
@@ -172,7 +176,7 @@ EOF
 chmod +x "$APPDIR/AppRun"
 
 # =========================
-# linuxdeploy
+# OpenCloud AppImage Builder (ARM64 / Qt6)
 # =========================
 cd "$WORKDIR"
 
@@ -198,3 +202,5 @@ echo " DONE"
 echo "=============================="
 
 ls -lh *.AppImage || true
+
+echo "AppImage should be in: $WORKDIR"
