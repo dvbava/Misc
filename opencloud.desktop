@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=OpenCloud Desktop
+Comment=OpenCloud Sync Client
+Exec=/home/dipak/opencloud-build/desktop/build/bin/opencloud
+Terminal=false
+X-GNOME-Autostart-enabled=true
+StartupNotify=true
+Categories=Network;FileTransfer;
