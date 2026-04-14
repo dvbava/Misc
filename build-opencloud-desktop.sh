@@ -43,6 +43,7 @@ sudo apt install -y \
   fuse3 libfuse3-3 \
   libgl1-mesa-dev \
   patchelf \
+  nlohmann-json3-dev \
   wget \
   file
 
